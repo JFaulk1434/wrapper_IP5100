@@ -1,22 +1,33 @@
 from setuptools import setup, find_packages
 
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
 setup(
     name="ip5100-wrapper",
-    version="0.1.0",
-    packages=find_packages(),
-    install_requires=[
-        "telnetlib-313-and-up",
-    ],
+    version="1.0.1",
     author="Justin Faulk",
-    author_email="",  # Add your email if you want
-    description="A Python wrapper for IP5100 ASpeed devices",
-    long_description=open("README.md").read(),
+    author_email="jfaulk@proitav.us",
+    description="A Python wrapper for controlling IP5100 ASpeed encoders and decoders via Telnet",
+    long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/JFaulk1434/wrapper_IP5100",
+    packages=find_packages(),
     classifiers=[
-        "Programming Language :: Python :: 3",
+        "Development Status :: 4 - Beta",
+        "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+        "Topic :: Multimedia :: Video",
     ],
-    python_requires=">=3.13",
+    python_requires=">=3.7",
+    install_requires=[
+        "telnetlib3>=2.0.0",
+    ],
 )
