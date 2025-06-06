@@ -9,8 +9,8 @@ description = "A Python wrapper for controlling IP5100 ASpeed encoders and decod
 readme = "README.md"
 authors = [{ name = "Justin Faulk", email = "jfaulk@proitav.us" }]
 license = { text = "MIT" }
-requires-python = ">=3.7"
-dynamic = ["dependencies"]
+requires-python = ">=3.13"
+dependencies = ["telnetlib-313-and-up"]
 
 [project.urls]
 "Homepage" = "https://github.com/JFaulk1434/wrapper_IP5100"
