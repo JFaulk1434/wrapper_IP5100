@@ -1,9 +1,12 @@
 name: Publish to PyPI
 
 on:
+  push:
+    tags:
+      - 'v*'  # Trigger on version tags
   release:
     types: [published]
-  workflow_dispatch:  # Add manual trigger option
+  workflow_dispatch:  # Manual trigger
 
 permissions:
   id-token: write  # IMPORTANT: this permission is mandatory for trusted publishing
