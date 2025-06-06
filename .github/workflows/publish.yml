@@ -33,5 +33,17 @@ jobs:
       run: |
         python -m build
         ls -la dist/
+        echo "Contents of dist directory:"
+        ls -la dist/
+        echo "Package files:"
+        tar -tvf dist/*.tar.gz
     - name: Publish package
-      uses: pypa/gh-action-pypi-publish@release/v1 
+      uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        verbose: true
+        print-hash: true
+    - name: Check PyPI
+      if: always()
+      run: |
+        echo "Checking PyPI status..."
+        curl -s https://pypi.org/pypi/ip5100-wrapper/json | jq . 
