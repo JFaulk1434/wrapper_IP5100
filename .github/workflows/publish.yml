@@ -4,6 +4,9 @@ on:
   release:
     types: [published]
 
+permissions:
+  id-token: write  # IMPORTANT: this permission is mandatory for trusted publishing
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
