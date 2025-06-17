@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ip5100-wrapper"
-version = "1.0.1"
+version = "1.0.2"
 description = "A Python wrapper for controlling IP5100 ASpeed encoders and decoders via Telnet"
 readme = "README.md"
 authors = [{ name = "Justin Faulk", email = "jfaulk@proitav.us" }]
