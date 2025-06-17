@@ -164,7 +164,7 @@ class IP5100_Device:
         self._mac = value
 
     def __str__(self):
-        return f"{self.trueName} - {self.alias} - {self.ip} - {self.mac} - {self.device_type} - {self.version}"
+        return f"{self.trueName} - {self.alias} - {self.ip} - {self.mac} - {self.device_type.capitalize()} - {self.version}"
 
     def connect(self):
         """
@@ -2102,4 +2102,4 @@ if __name__ == "__main__":
     device_ip = "10.0.30.31"
     device = IP5100_Device(device_ip, debug=True)
     print(device, "\n")
-    print(device.cec_onetouch_play())
+    device.cec_standby()
